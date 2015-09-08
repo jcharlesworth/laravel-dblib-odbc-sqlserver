@@ -10,6 +10,8 @@ class DBLIBConnector extends BaceConnector implements ConnectorInterface
     {
 
         $options = $this->getOptions($config);
+        $options = [];
+        
         $dsn = $this->getDsn($config);
         $connection = $this->createConnection($dsn, $config, $options);
 
